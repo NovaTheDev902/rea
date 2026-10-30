@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# C++
+*.o
+*.obj
+*.exe
+*.bin
+
+# Java
+*.class
+
+# iOS
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+DerivedData/
+
+# Android
+*.apk
+*.aar
+build/
+.gradle/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Results
+operational_results.json
+*.json.bak
+
+# Secrets
+*.key
+*.pem
+session*.json
+device*.json

@@ -1,0 +1,15 @@
+[package]
+name = "graphite_core"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "graphite_core"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "graphite_core"
+path = "src/main.rs"
+
+[dependencies]
+libc = "0.2"

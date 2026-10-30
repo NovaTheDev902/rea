@@ -1,0 +1,28 @@
+{
+  "bundles": [
+    {
+      "signed_pk_id": 8437760,
+      "otpk_ids": [8455555, 8455556, 8455557],
+      "platform_hint": "iOS",
+      "ios_version": 17
+    },
+    {
+      "signed_pk_id": 0,
+      "otpk_ids": [12, 15, 20],
+      "platform_hint": "Android",
+      "ios_version": null
+    },
+    {
+      "signed_pk_id": 15601234,
+      "otpk_ids": [16777200, 16777201],
+      "platform_hint": "Android",
+      "ios_version": null
+    },
+    {
+      "signed_pk_id": 8388608,
+      "otpk_ids": [8388608, 8388609],
+      "platform_hint": "iOS",
+      "ios_version": 16
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+// build.gradle - Android project for GraphiteExploit
+// Build with: gradle assembleRelease
+// Or open in Android Studio
+
+plugins {
+    id 'com.android.library' version '8.2.0'
+}
+
+android {
+    namespace 'com.graphite.exploit'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++17"
+                abiFilters "arm64-v8a", "armeabi-v7a", "x86_64"
+            }
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+}
